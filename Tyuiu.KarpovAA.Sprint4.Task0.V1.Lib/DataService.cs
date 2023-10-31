@@ -23,4 +23,4 @@ namespace Tyuiu.KarpovAA.Sprint4.Task0.V1.Lib
             return result;
         }
     }
-}
+} 
