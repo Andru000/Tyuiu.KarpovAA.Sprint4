@@ -30,7 +30,7 @@ namespace Tyuiu.KarpovAA.Sprint4.Task2.V16
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
-
+             
             int len;
             Console.Write("Введите кол-во элементов массива: ");
             len = Convert.ToInt32(Console.ReadLine());
