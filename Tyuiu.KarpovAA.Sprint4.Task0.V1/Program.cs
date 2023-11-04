@@ -30,7 +30,7 @@ namespace Tyuiu.KarpovAA.Sprint4.Task0.V1
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine("{6 ,4 ,3 ,2 ,1 ,0 ,9 ,8 ,7 ,5}");
+            Console.WriteLine("{6 ,4 ,3 ,2 ,1 ,0 ,9 ,8 ,7 ,5}"); 
 
             int[] Array = new int[] { 6, 4, 3, 2, 1, 0, 9, 8, 7, 5 };
 

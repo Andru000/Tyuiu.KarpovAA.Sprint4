@@ -17,6 +17,6 @@ namespace Tyuiu.KarpovAA.Sprint4.Task0.V1.Test
             int res = ds.GetSumEvenArrEl(Array);
             Assert.AreEqual(wait, res);
              
-        }
+        }  
     }
 }

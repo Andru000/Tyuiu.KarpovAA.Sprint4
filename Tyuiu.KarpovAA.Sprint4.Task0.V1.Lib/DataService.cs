@@ -17,7 +17,7 @@ namespace Tyuiu.KarpovAA.Sprint4.Task0.V1.Lib
             {
                 if (array[i] % 2 == 0)
                 {
-                    result += array[i];
+                    result += array[i]; 
                 }
             }
             return result;
