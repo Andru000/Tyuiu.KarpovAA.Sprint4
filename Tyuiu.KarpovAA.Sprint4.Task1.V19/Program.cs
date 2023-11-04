@@ -32,7 +32,7 @@ namespace Tyuiu.KarpovAA.Sprint4.Task1.V19
 
             int length = 12;
             int[] numsArray = new int[length];
-
+             
             Console.WriteLine("Длина массива = " + length);
 
             for (int i = 0; i < numsArray.Length; i++)

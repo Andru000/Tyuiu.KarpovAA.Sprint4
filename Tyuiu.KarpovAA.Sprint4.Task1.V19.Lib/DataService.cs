@@ -21,7 +21,7 @@ namespace Tyuiu.KarpovAA.Sprint4.Task1.V19.Lib
                     sumArray += array[i];
                 }
             }
-
+             
             return sumArray;
         }
     }
