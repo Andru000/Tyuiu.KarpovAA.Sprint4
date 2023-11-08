@@ -16,7 +16,7 @@ namespace Tyuiu.KarpovAA.Sprint4.Task3.V20.Lib
             int rows = array.GetUpperBound(0) + 1;
             int columns = array.Length / rows;
             int minimal = 100000;
-            for (int i = 0; i < rows; i++)
+            for (int i = 0; i < rows; i++) 
             {
                 for (int j = 0; j < columns; j++)
                 {
