@@ -22,6 +22,6 @@ namespace Tyuiu.KarpovAA.Sprint4.Task2.V16.Lib
                 }
             }
             return sum;
-        }
+        } 
     }
 } 
