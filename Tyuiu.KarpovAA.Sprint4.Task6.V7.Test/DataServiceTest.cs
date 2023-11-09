@@ -10,6 +10,18 @@ namespace Tyuiu.KarpovAA.Sprint4.Task6.V7.Test
         [TestMethod]
         public void TestMethod1()
         {
+            DataService ds = new DataService();
+
+            string[] array = { "Математика", "Физика", "Химия", "Биология", "География", "История", "Экономика" };
+
+
+            
+            int count = ds.Calculate(array);
+
+      
+            Assert.AreEqual(3, count);
+
+
         }
     }
 }
