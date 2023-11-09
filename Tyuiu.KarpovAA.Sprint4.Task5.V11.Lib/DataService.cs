@@ -11,27 +11,16 @@ namespace Tyuiu.KarpovAA.Sprint4.Task5.V11.Lib
     {
         public int[,] Calculate(int[,] matrix)
         {
-            int rows = matrix.GetLength(0);
-            int columns = matrix.GetLength(1);
-
-            int[,] result = new int[rows, columns];
-
-            for (int i = 0; i < rows; i++)
+            int[,] res = matrix;
+            for (int i = 0; i < res.GetLength(0); i++)
             {
-                for (int j = 0; j < columns; j++)
+                for (int j = 0; j < res.GetLength(1); j++)
                 {
-                    if (matrix[i, j] > 0)
-                    {
-                        result[i, j] = 1;
-                    }
-                    else
-                    {
-                        result[i, j] = matrix[i, j];
-                    }
+                    if (res[i, j] > 0)
+                        res[i, j] = 1;
                 }
             }
-
-            return result;
+            return res;
         }
     }
 }

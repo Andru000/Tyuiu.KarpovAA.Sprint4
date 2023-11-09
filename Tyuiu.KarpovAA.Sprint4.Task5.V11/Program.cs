@@ -30,56 +30,43 @@ namespace Tyuiu.KarpovAA.Sprint4.Task5.V11
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-          
-            int[,] matrix = new int[5, 5];
-            Random random = new Random();
-            for (int i = 0; i < 5; i++)
+            Console.Write("Введите количество строк в массиве: ");
+            int rows = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите количество столбцов в массиве: ");
+            int columns = Convert.ToInt32(Console.ReadLine());
+            Random rnd = new Random();
+            int[,] mtrx = new int[rows, columns];
+            for (int i = 0; i < rows; i++)
             {
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < columns; j++)
                 {
-                    matrix[i, j] = random.Next(-7, 3);
+                    mtrx[i, j] = rnd.Next(-7, 3);
                 }
             }
-   
-
-            int[,] result = ds.Calculate(matrix);
-
-
-            Console.WriteLine("Исходный массив:");
-            PrintMatrix(matrix);
-            Console.WriteLine("Измененный массив:");
-            PrintMatrix(result);
-
-
-
-
-
-
+            Console.WriteLine("Массив:");
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    Console.Write($"{mtrx[i, j]} \t");
+                }
+                Console.WriteLine();
+            }
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
 
-
-        }
-
-        private static void PrintMatrix(int[,] matrix)
-        {
-            int rows = matrix.GetLength(0);
-            int columns = matrix.GetLength(1);
-
+            mtrx = ds.Calculate(mtrx);
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < columns; j++)
                 {
-                    Console.Write(matrix[i, j] + " ");
+                    Console.Write($"{mtrx[i, j]} \t");
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine();
-
-
 
 
             Console.ReadKey();
