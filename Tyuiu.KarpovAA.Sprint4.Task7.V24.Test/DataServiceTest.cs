@@ -11,13 +11,14 @@ namespace Tyuiu.KarpovAA.Sprint4.Task7.V24.Test
         public void TestMethod1()
         {
             DataService ds = new DataService();
-            int expected = 1179648;
 
-           
-            int result = ds.Calculate(5, 3, "651827384219648");
+            int rows = 5, colums = 3;
+            int[,] mtrx = new int[rows, colums];
+            string str = "651827384219648";
 
-           
-            Assert.AreEqual(expected, result);
+            int res = ds.Calculate(rows, colums, str);
+
+            Assert.AreEqual(1179648, res);
         }
     }
 }

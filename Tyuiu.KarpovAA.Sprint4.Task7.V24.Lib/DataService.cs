@@ -11,31 +11,28 @@ namespace Tyuiu.KarpovAA.Sprint4.Task7.V24.Lib
     {
         public int Calculate(int n, int m, string value)
         {
-            int[,] matrix = new int[n, m];
-            int index = 0;
-            int evenProduct = 1;
+            int[,] mtrx = new int[n, m];
 
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < m; j++)
                 {
-                    matrix[i, j] = int.Parse(value[index].ToString());
-                    index++;
+                    mtrx[i, j] = int.Parse(value.Substring(i * m + j, 1));
                 }
             }
 
+            int proiz = 1;
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < m; j++)
                 {
-                    if (matrix[i, j] % 2 == 0)
+                    if (mtrx[i, j] % 2 == 0)
                     {
-                        evenProduct *= matrix[i, j];
+                        proiz *= mtrx[i, j];
                     }
                 }
             }
-
-            return evenProduct;
+            return proiz;
 
         }
     }

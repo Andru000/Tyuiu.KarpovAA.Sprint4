@@ -32,21 +32,33 @@ namespace Tyuiu.KarpovAA.Sprint4.Task7.V24
 
 
 
-            string value = "651827384219648";
-            int n = 5;
-            int m = 3;
+            string str = "651827384219648";
 
-            int result = ds.Calculate(n, m, value);
-
+            int rows = 5, colums = 3;
+            int[,] mtrx = new int[rows, colums];
 
 
+            int index = 0;
+
+            Console.WriteLine("\nМассив: ");
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < colums; j++)
+                {
+                    Console.Write($"{str[index]} \t");
+                    index++;
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
 
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine("Произведение четных чисел: " + result);
+            Console.WriteLine($"Произведение четных чисел = {ds.Calculate(rows, colums, str)}");
 
 
             Console.ReadKey();
